@@ -69,7 +69,7 @@ if (userId) {
       const gender = document.getElementById("gender");
       // gender.innerText = data.gender.substring(0, 1).toUpperCase();
       gender.className =
-        data.gender == "male" ? "fa-solid fa-mars" : "fa-regular fa-female";
+        data.gender == "male" ? "fa-solid fa-mars" : "fa-solid fa-venus";
       const height = document.getElementById("height");
       height.innerText = data.height;
       const weight = document.getElementById("weight");
