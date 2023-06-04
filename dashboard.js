@@ -219,12 +219,11 @@ function predictHeartDisease(data) {
   ) {
     heartDiseaseRisk += 2;
   } else {
-    heartDiseaseRisk = 3;
+    heartDiseaseRisk += 3;
   }
 
   // // Calculate probability
   // const probability = 100 * (1 - 0.98767 ** heartDiseaseRisk);
-
   // Predict the risk category
   let riskCategory;
   if (heartDiseaseRisk <= 10) {
@@ -234,7 +233,7 @@ function predictHeartDisease(data) {
   } else {
     riskCategory = "High";
   }
-  heartDiseaseRisk *= 2;
+  heartDiseaseRisk *= 10;
   if (heartDiseaseRisk > 95) {
     heartDiseaseRisk = 95;
   }
