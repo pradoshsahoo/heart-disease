@@ -1,25 +1,193 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Circular Progress Bar</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Profile</title>
   </head>
+
   <body>
-    <div class="container">
-      <div class="circular-progress">
-        <span class="progress-value">0%</span>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img
+              src="https://th.bing.com/th/id/OIP.tRXNZgWClwfni5qgdnTLtAHaL_?pid=ImgDet&rs=1"
+              alt="logo"
+            />
+          </span>
+          <div class="text header-text">
+            <span class="name"> Hritik Roshan </span>
+          </div>
+        </div>
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="dashboard.html">
+                <i class="bx bxs-home-smile icon"></i>
+                <span class="text nav-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="editProfile.html">
+                <i class="bx bx-edit-alt icon"></i>
+                <span class="text nav-text">Edit Profile</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="">
+                <i class="bx bxs-folder-minus icon"></i>
+                <span class="text nav-text">Delete Account</span>
+              </a>
+            </li>
+
+            <li class="nav-link">
+              <a href="">
+                <i class="bx bx-history icon"></i>
+                <span class="text nav-text">history</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-content">
+          <li class="logout">
+            <a href="">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">logout</span>
+            </a>
+          </li>
+          <li class="mode">
+            <div class="moon-sun">
+              <i class="bx bx-moon icon moon"></i>
+              <i class="bx bx-sun icon sun"></i>
+            </div>
+            <span class="mode-text text">Dark mode</span>
+            <div class="toggle-switch">
+              <span class="switch"></span>
+            </div>
+          </li>
+        </div>
       </div>
+    </nav>
 
-      <span class="text">HTML & CSS</span>
+    <div class="main-section">
+      <div class="container1">
+        <div class="profile">
+          <div class="image">
+            <img
+              id="image12"
+              class="dp"
+              src="https://www.gravatar.com/avatar/dda48cc05faa6ca6a78f8135d4b365b7?s=640&r=g&d=mm"
+              alt=""
+            />
+          </div>
+          <div class="details">
+            <div class="name1" id="name"></div>
+            <div class="age" id="age"></div>
+          </div>
+        </div>
+        <div class="gender">
+          <div class="cardTitle">
+            <div class="rect"></div>
+            <div class="title">GENDER</div>
+          </div>
+          <!-- <div class="cardValue" id="gender">
+
+          </div> -->
+          <div class="cardValue">
+            <i id="gender"></i>
+          </div>
+        </div>
+        <div class="smoker">
+          <div class="cardTitle">
+            <div class="rect"></div>
+            <div class="title">SMOKER</div>
+          </div>
+          <div class="cardValue2">
+            <i id="smokerValue"></i>
+          </div>
+        </div>
+      </div>
+      <div class="mainContainer">
+        <div class="grid">
+          <div class="weight">
+            <div class="cardTitle">
+              <div class="rect1"></div>
+              <div class="title">Weight(kg)</div>
+            </div>
+            <div class="cardValue1" id="weight"></div>
+          </div>
+          <div class="height">
+            <div class="cardTitle">
+              <div class="rect1"></div>
+              <div class="title">Height(cm)</div>
+            </div>
+            <div class="cardValue1" id="height"></div>
+          </div>
+          <div class="bpm">
+            <div class="cardTitle">
+              <div class="rect1"></div>
+              <div class="title">BPM</div>
+            </div>
+            <div class="cardValue1" id="bpm"></div>
+          </div>
+          <div class="cholestrol">
+            <div class="cardTitle">
+              <div class="rect1"></div>
+              <div class="title">Cholestrol</div>
+            </div>
+            <div class="cardValue1" id="cholesterol"></div>
+          </div>
+          <div class="systolicBP">
+            <div class="cardTitle">
+              <div class="rect1"></div>
+              <div class="title">Systolic BP</div>
+            </div>
+            <div class="cardValue1" id="systolic"></div>
+          </div>
+          <div class="diastolicBP">
+            <div class="cardTitle">
+              <div class="rect1"></div>
+              <div class="title">Diastolic BP</div>
+            </div>
+            <div class="cardValue1" id="diastolic"></div>
+          </div>
+        </div>
+        <div class="risk">
+          <div class="container">
+            <div class="circular-progress">
+              <span class="progress-value">0%</span>
+            </div>
+          </div>
+          <div class="result" id="riskCategory"></div>
+          <div class="advice" id="advice"></div>
+        </div>
+      </div>
     </div>
-
-    <!-- JavaScript -->
-    <script src="index.js"></script>
   </body>
+
+  <script src="dashboard.js"></script>
 </html>

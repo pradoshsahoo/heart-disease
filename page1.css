@@ -1,0 +1,159 @@
+body{
+    background-color: rgb(222, 222, 222);
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+#eclipse1{
+  position: absolute;
+  margin-top: 0px;
+  width: 50%;
+  height: 100%;
+}
+#eclipse2{
+  position: absolute;
+  margin-top: 12.5%;
+  margin-left: 19%;
+  width: 50%;
+}
+#heart{
+  position: absolute;
+  margin: 9% 13%;
+  width: 31%;
+  height: 63%;
+  z-index: 1;
+}
+#circle1{
+  position: absolute;
+  margin: 13.5% 16.5%;
+  width: 24%;
+
+}
+#circle2{
+  position: absolute;
+  margin: 11% 14%;
+  width: 29%;
+}
+
+#login{
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 60%;
+  width: 25%;
+  height: 60%;
+  background-color: #ffffff;
+  border-radius: 15px ;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+#firstaid{
+  position: absolute;
+  z-index: 1;
+  width: 13%;
+  height: 25%;
+  margin: 18% 35%;
+}
+#defibrillator{
+  position: absolute;
+  z-index: 1;
+  width: 8%;
+  height: 19%;
+  margin: 31% 15%;
+}
+#MedicalRecord{
+  position: absolute;
+  z-index: 1;
+  width: 6.98%;
+  margin: 12.2% 13%;
+}
+#image{
+  padding: 0px;
+  margin: 0px;
+}
+.container {
+  position: absolute;
+  width: 32%;
+  height: 30rem;
+  margin-left: 55%;
+  margin-top: 5%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+#joinus{
+  margin-left: 7%;
+  margin-top: 4%;
+
+}
+#signup{
+  margin-left: 7%;
+  font-weight: 800;
+  font-size: 160%;
+}
+
+.container .form-group {
+  margin-left: 7%;
+  margin-top: 3%;
+}
+
+.container .form-group label {
+  font-weight: 00;
+  font-size: 80%;
+}
+
+.container .form-group input[type="text"],
+.container .form-group input[type="email"],
+.container .form-group input[type="password"],
+.container .form-group input[type="number"],
+.container .form-group input[type="file"] {
+  width: 90%;
+  padding: 10px;border-radius: 10px ;
+  border: #bdbdbd 3px solid;
+  /* justify-content: center; */
+}
+
+.container .form-group button {
+  width: 96.5%;
+  height: 50%;
+  padding: 3.2%;
+  background-color: #006bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Poppins",sans-serif;
+  margin-top: 6%;
+  margin-bottom: 7%;
+}
+
+.container #error-message {
+  color: red;
+  margin-top: 10px;
+}
+#formheight,#formweight,#sys,#dia,.age,.BPM,.pass,.cpass{
+  width: 45%;
+}
+.gender{
+  width: 60%;
+  margin-right: 0px;
+}
+.smoke{
+  width: 60%;
+  margin-left:0px;
+}
+.smoke input [type="checkbox"]{
+  margin-top: 16%;
+}
+#smoke-gender{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+#height-weight,#sys-dy,#age-BPM,#pass-cpass{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 8%;
+}

@@ -1,0 +1,68 @@
+{
+  "mydata": [
+    {
+      "name": "Anurag Nayak ",
+      "email": "anuragnayak651@gmail.com",
+      "password": "1230",
+      "age": "22",
+      "gender": "male",
+      "weight": "60",
+      "height": "175",
+      "bpm": "72",
+      "smoker": false,
+      "cholesterol": "45",
+      "systolic": "112",
+      "diastolic": "132",
+      "id": 2
+    },
+    {
+      "name": "Rama",
+      "email": "ramchandrarout423@gmail.com",
+      "password": "0123",
+      "age": "22",
+      "gender": "male",
+      "weight": "58",
+      "height": "152",
+      "bpm": "75",
+      "smoker": true,
+      "cholesterol": "68",
+      "systolic": "102",
+      "diastolic": "132",
+      "id": 3
+    },
+    {
+      "name": "Pratiksha mohanty",
+      "email": "liti624@gmail.com",
+      "password": "1234567",
+      "confirm_password": "1234567",
+      "profile_picture": "C:\\fakepath\\wp.jpg",
+      "age": "21",
+      "gender": "female",
+      "weight": "52",
+      "height": "167",
+      "bpm": "82",
+      "smoker": true,
+      "cholesterol": "120",
+      "systolic": "120",
+      "diastolic": "80",
+      "id": 4
+    },
+    {
+      "name": "Pradosh Sahoo",
+      "email": "pradoshsahoo81@gmail.com",
+      "password": "123",
+      "confirm_password": "123",
+      "profile_picture": "https://img.freepik.com/free-icon/user_318-159711.jpg",
+      "age": "20",
+      "gender": "male",
+      "weight": "89",
+      "height": "170",
+      "bpm": "72",
+      "smoker": false,
+      "cholesterol": "200",
+      "systolic": "120",
+      "diastolic": "80",
+      "id": 5
+    }
+  ]
+}

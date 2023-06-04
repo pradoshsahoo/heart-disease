@@ -1,35 +1,445 @@
-/* Google Fonts - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 *{
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --body-color: rgb(239, 239, 239);
+    --sidebar-color: #FFF;
+    --primary-color: #006bff;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+
+
 }
 body{
     height: 100vh;
+    background-color: var(
+        --body-color
+    );
+    overflow-x: hidden;
+}
+body.dark{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+::selection{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.sidebar{
+    position: fixed;
+    top: 4%;
+    left: 1%;
+    border-radius: 20px;
+    height: 91vh;
+    padding: 10px 14px;
+    width: 250px;
+    background-color: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+.sidebar.close{
+    width: 80px;
+}
+.sidebar li{
+    height: 50px;
+    margin-top: 10px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+
+.sidebar img{
+   width: 40px; 
+   height: 40px;
+   object-fit: cover;
+   border-radius: 6px;
+}
+
+.image-text {
+    display: flex;
+    align-items: center;
+
+}
+.sidebar header{
+    position: relative;
+}
+.sidebar .text{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--tran-03);
+    white-space: nowrap;
+    opacity: 1;
+}
+.sidebar .image{
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+.sidebar header .image-text{
+    display: flex;
+    align-items: center;
+}
+.sidebar header .logo-text{
+    display: flex;
+    flex-direction: column;
+}
+.image-text .header-text{
+  display: text;
+    flex-direction: column; 
+}
+.header-text .name{
+       font-weight: 600 ;
+}
+
+.sidebar li .icon{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #7d2ae8;
+    font-size: 20px;
+    height: 100%;
+    min-width:50px;
+     
 }
+
+
+.sidebar li .icon , .sidebar li text{
+    color: var(--text-color);
+    transition: var(--trans-03);
+}
+
+.sidebar.close .text{
+    opacity: 0;
+}
+.sidebar.close .toggle{
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+body.dark .sidebar header .toggle{
+    color: var(--text-color);
+    background-color: #006bff;
+}
+.sidebar li a{
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    border-radius: 6px;
+    align-items: center;
+    transition: var(--trans-03);
+}
+.sidebar li a:hover{
+    background-color: var(--toggle-color);
+    border-radius: 20px;
+}
+.sidebar li a:hover .icon,.sidebar li a:hover .text{
+    color: rgb(0, 0, 0);
+}
+.sidebbar .menu-bar{
+    height: calc(100%-50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.menu-bar .mode i{
+  position: absolute;
+
+}
+.menu-bar .mode{
+    border-radius: 6px;
+    position: relative;
+    background-color: var(--primary-color-light);
+    transition: var(--tran-05);
+
+}
+
+.menu-bar .mode .moon-sun{
+    height: 50px;
+    width: 60px;
+
+}
+.menu-bar .mode i{
+    position: absolute;
+}
+.menu-bar .mode i.sun{
+    opacity: 0;
+
+}
+body.dark .mode .moon-sun i.sun{
+    opacity: 1;
+}
+body.dark .mode .moon-sun i.moon{
+    opacity: 0;
+}
+
+.toggle-switch{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 60px;
+    cursor: pointer;
+    right: 0;
+    border-radius: 6px;
+}
+.toggle-switch .switch{
+    position: relative;
+    height: 22px;
+    width: 38px;
+    border-radius: 25px ;
+    background-color: var(--toggle-color);
+    transition: var(--tran-05);
+}
+.switch::before{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform:translateY(-50%);
+    background-color:var(--sidebar-color) ;
+    transition: var(--tran-04);
+}
+body.dark .switch::before{
+    left: 20px;
+}
+.main-section{
+    position: absolute;
+    left: 90px;
+    width: 95%;
+    height: 100vh;
+    
+}
+.container1{
+    display: flex;
+    margin: 2%;
+    font-size: 30px;
+}
+body.dark .smoker,body.dark .gender,body.dark .profile,body.dark .bpm,body.dark .weight,
+body.dark .height,.body.dark .cholestrol,body.dark .cholestrol,body.dark .systolicBP,body.dark .diastolicBP,body.dark .risk{
+    background-color: rgb(43, 43, 43);
+    box-shadow: 5px 5px 7px rgb(19, 19, 19) ;
+    color: white;
+}
+body.dark .container{
+    color: white;
+    background-color: rgb(43, 43, 43);
+}
+.container2{
+    display: flex;
+    margin:2%;
+    font-size: 30px;
+}
+.smoker,.gender{
+    height: 27vh;
+    width: 23%;
+    background-color: rgb(255, 255, 255);
+    margin-right: 2%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 7px rgb(231, 231, 231) ;
+}
+.rect{
+    display: block;
+    width: 2%;
+    height: 1vh;
+    background-color: #006bff;
+    margin-top: 3.5%;
+    margin-left: 2%;
+}
+.rect1{
+    display: block;
+    width: 3%;
+    height: 1vh;
+    background-color: #006bff;
+    margin-top: 5%;
+    margin-left: 2.5%;
+}
+.cardTitle{
+    font-size: 15px;
+    padding: 5%;
+    padding-bottom: 0%;
+    font-weight: 500;
+    display: flex;
+    text-transform: uppercase;
+}
+.title{
+    margin-left: 2%;
+}
+.cardValue{
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    background-color: #006affd4;
+    border-radius: 100%;
+    margin: auto;
+    margin-top:5%;
+    font-size: 150%;
+    padding-top:2.5%;
+    font-weight: 500;
+    color: white;
+    /* background-color: rgba(10, 194, 255, 0.669);
+    color: white;
+    width: 38%;
+    height: 55%;
+    margin: auto;
+    padding-top:5.5%;
+    border-radius: 100%;
+    font-size: 40px; */
+    /* text-transform: uppercase; */
+}
+.cardValue1{
+    text-align: center;
+    padding-top:5%;
+    /* font-weight: 500;
+    color: rgb(0, 200, 255); */
+    /* font-weight: bold; */
+    font-size: 60px;
+    font-weight: 500;
+    color: #006bff;
+}
+.cardValue2{
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    background-color: #006affd4;
+    border-radius: 100%;
+    margin: auto;
+    margin-top:5%;
+    padding-top: 7%;
+}
+#smokerValue{
+    height: 60px;
+    width: 60px;
+    font-size: 150%;
+}
+.profile{
+    height: 27vh;
+    width: 55%;
+    background-color: rgb(255, 255, 255);
+    margin-right: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2%;
+    box-sizing: border-box;
+    border-radius: 25px;
+    box-shadow: 5px 5px 7px rgb(231, 231, 231) ;
+}
+.details{
+    width:70%;
+    height: 100px;
+}
+.name1{
+    margin-left: 4%;
+    font-weight: 500;
+    font-size: 40px;
+}
+.email{
+    font-size: 12px;
+    align-self: last baseline;
+    margin-bottom: 2%;
+    margin-right: 3%;
+    opacity: 70%;
+}
+.age{
+    margin-left: 4%;
+    font-size: 15px;
+}
+img{
+    height: 100px;
+    width: 100px;
+    border: 2px solid white;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.weight,.height,.bpm{
+    height: 27vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10%;
+    box-shadow: 5px 5px 7px rgb(231, 231, 231) ;
+}
+.cholestrol,.systolicBP,.diastolicBP{
+    height: 27vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10%;
+    box-shadow: 5px 5px 7px rgb(231, 231, 231) ;
+}
+.risk{
+    margin: 2%;
+    margin-top: 0px;
+    width: 42.5%;
+    height: 59vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 5px 5px 7px rgb(231, 231, 231) ;
+    box-sizing: border-box;
+}
+.grid{
+    display: grid;
+    margin-left: 2%;
+    width: 49.5%;
+    grid-template-columns: repeat(1,1fr 1fr 1fr);
+    gap: 4%;
+    row-gap: 0%;
+}
+.mainContainer{
+    display: flex;
+}
+
 .container{
     display: flex;
     width: 420px;
-    padding: 50px 0;
+    margin-left: 10%;
+    padding: 5% 0;
     border-radius: 8px;
     background: #fff;
     row-gap: 30px;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 5%;
 }
 .circular-progress{
     position: relative;
-    height: 250px;
-    width: 250px;
+    height: 180px;
+    width: 180px;
     border-radius: 50%;
-    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    background: conic-gradient(#006bff 3.6deg, #ededed 0deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,19 +447,36 @@ body{
 .circular-progress::before{
     content: "";
     position: absolute;
-    height: 210px;
-    width: 210px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     background-color: #fff;
+}
+body.dark .circular-progress{
+    background: conic-gradient(#006bff 3.6deg, #292929 0deg);
 }
 .progress-value{
     position: relative;
     font-size: 40px;
     font-weight: 600;
-    color: #7d2ae8;
+    color: #006bff;
 }
 .text{
     font-size: 30px;
     font-weight: 500;
     color: #606060;
+}
+.advice{
+    font-size: 10px;
+    text-align: center;
+    padding: 5%;
+    padding-top: 2%;
+}
+.result{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+}.color{
+    color: rgb(255, 0, 0);
 }
