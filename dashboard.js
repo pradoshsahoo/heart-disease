@@ -47,6 +47,21 @@ if (id) {
   window.location.href = "./login.html";
 }
 
+const button4 = document.getElementById("delete");
+
+button4.addEventListener("click", () => {
+  const confrm = confirm("You sure you want to delete the account");
+  localStorage.removeItem("id");
+  alert("Deleted successfully");
+  if (confrm) {
+    fetch(`http://localhost:5502/mydata/${id}`, {
+      method: "DELETE",
+    }).catch((error) => {
+      alert("An error occured!");
+    });
+  }
+});
+
 //DASHBOARD DETAILS RIGHT JS
 const advices = [
   "Follow a balanced diet, exercise regularly, and maintain a healthy weight ,Get regular check-ups and monitor your cholesterol, blood pressure, and other risk factors.Quit smoking and limit alcohol intake to reduce cardiovascular risks.",
@@ -127,6 +142,9 @@ if (userId) {
       //   localStorage.removeItem("token");
       //   window.location.href = "./login.html";
       // });
+    })
+    .catch(() => {
+      window.location.href = "./login.html";
     });
 } else {
   window.location.href = "./login.html";
@@ -146,20 +164,12 @@ function predictHeartDisease(data) {
   let heartDiseaseRisk = 0;
 
   // Age
-  if (age >= 30 && age <= 35) {
+  if (age >= 30 && age <= 40) {
     heartDiseaseRisk += 1;
-  } else if (age >= 36 && age <= 39) {
+  } else if (age >= 40 && age <= 50) {
     heartDiseaseRisk += 2;
-  } else if (age >= 40 && age <= 44) {
-    heartDiseaseRisk += 3;
-  } else if (age >= 45 && age <= 49) {
-    heartDiseaseRisk += 4;
-  } else if (age >= 50 && age <= 55) {
-    heartDiseaseRisk += 5;
-  } else if (age >= 56 && age <= 60) {
-    heartDiseaseRisk += 6;
   } else {
-    heartDiseaseRisk += 7;
+    heartDiseaseRisk += 3;
   }
 
   // Gender
@@ -174,8 +184,6 @@ function predictHeartDisease(data) {
     heartDiseaseRisk += 1;
   } else if (bmi >= 30 && bmi <= 35) {
     heartDiseaseRisk += 2;
-  } else if (bmi >= 30) {
-    heartDiseaseRisk += 3;
   } else {
     heartDiseaseRisk += 3;
   }
@@ -183,14 +191,10 @@ function predictHeartDisease(data) {
   // Resting Heart Rate
   if (bpm >= 76 && bpm <= 85) {
     heartDiseaseRisk += 1;
-  }
-  if (bpm >= 85 && bpm <= 100) {
+  } else if (bpm >= 85 && bpm <= 100) {
     heartDiseaseRisk += 2;
-  }
-  if (bpm >= 100) {
-    heartDiseaseRisk += 3;
   } else {
-    heartDiseaseRisk += 4;
+    heartDiseaseRisk += 3;
   }
 
   // Smoking
@@ -202,24 +206,19 @@ function predictHeartDisease(data) {
   if (cholesterol >= 200 && cholesterol <= 239) {
     heartDiseaseRisk += 1;
   } else {
-    heartDiseaseRisk += (cholesterol - 200) / 40 + 1;
+    heartDiseaseRisk += 2;
   }
 
   // Blood Pressure
   if (systolicBP >= 120 && systolicBP <= 129 && diastolicBP < 80) {
     heartDiseaseRisk += 1;
   } else if (
-    (systolicBP >= 130 && systolicBP <= 139) ||
-    (diastolicBP >= 80 && diastolicBP <= 89)
-  ) {
-    heartDiseaseRisk += 2;
-  } else if (
-    (systolicBP >= 140 && systolicBP <= 149) ||
-    (diastolicBP >= 90 && diastolicBP <= 99)
+    (systolicBP >= 130 && systolicBP <= 149) ||
+    (diastolicBP >= 80 && diastolicBP <= 99)
   ) {
     heartDiseaseRisk += 2;
   } else {
-    heartDiseaseRisk = 3;
+    heartDiseaseRisk += 3;
   }
 
   // // Calculate probability
@@ -227,14 +226,14 @@ function predictHeartDisease(data) {
 
   // Predict the risk category
   let riskCategory;
-  if (heartDiseaseRisk <= 10) {
+  if (heartDiseaseRisk <= 5) {
     riskCategory = "Low";
-  } else if (heartDiseaseRisk <= 20) {
+  } else if (heartDiseaseRisk <= 10) {
     riskCategory = "Moderate";
   } else {
     riskCategory = "High";
   }
-  heartDiseaseRisk *= 2;
+  heartDiseaseRisk *= 6.667;
   if (heartDiseaseRisk > 95) {
     heartDiseaseRisk = 95;
   }

@@ -9,12 +9,14 @@ body{
   margin-top: 0px;
   width: 50%;
   height: 100%;
+  z-index: -2;
 }
 #eclipse2{
   position: absolute;
   margin-top: 12.5%;
   margin-left: 19%;
   width: 50%;
+  z-index: -3;
 }
 #heart{
   position: absolute;
@@ -45,6 +47,7 @@ body{
   border-radius: 15px ;
   margin-bottom: 0px;
   padding: 0px;
+  z-index: 23;
 }
 #firstaid{
   position: absolute;
