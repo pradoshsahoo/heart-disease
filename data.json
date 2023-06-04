@@ -63,6 +63,22 @@
       "systolic": "120",
       "diastolic": "80",
       "id": 5
+    },
+    {
+      "name": "dikshya agarwal",
+      "email": "ddikshya.agarwal2002@gmail.com",
+      "password": "1",
+      "profile_picture": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/71adb200-bffa-4398-9796-eb15576535d3/dcnb5sb-97a9e86b-a342-471e-ace1-04b571713edb.png/v1/fill/w_719,h_1111,q_70,strp/spider_gwen_by_lee_xopher_by_leexopher_dcnb5sb-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU0NSIsInBhdGgiOiJcL2ZcLzcxYWRiMjAwLWJmZmEtNDM5OC05Nzk2LWViMTU1NzY1MzVkM1wvZGNuYjVzYi05N2E5ZTg2Yi1hMzQyLTQ3MWUtYWNlMS0wNGI1NzE3MTNlZGIucG5nIiwid2lkdGgiOiI8PTEwMDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.pupPulwEzqPYBT8V7vG_BkcJ5tSC5PgGzIbMb8wPOyM",
+      "age": "25",
+      "gender": "male",
+      "weight": "80",
+      "height": "168",
+      "bpm": "100",
+      "smoker": true,
+      "cholesterol": "280",
+      "systolic": "200",
+      "diastolic": "80",
+      "id": 6
     }
   ]
 }

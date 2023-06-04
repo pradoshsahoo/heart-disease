@@ -71,11 +71,13 @@ body{
   margin: 0px;
 }
 .container {
+  display: flex;
+  justify-content: space-evenly;
   position: absolute;
-  width: 32%;
-  height: 30rem;
-  margin-left: 55%;
-  margin-top: 5%;
+  width: 80%;
+  height: 40rem;
+  margin-left: 10%;
+  margin-top: 2%;
   padding: 20px;
   background-color: #ffffff;
   border-radius: 15px;
@@ -98,7 +100,7 @@ body{
 }
 
 .container .form-group label {
-  font-weight: 00;
+  font-weight: 500;
   font-size: 80%;
 }
 
@@ -149,7 +151,6 @@ body{
   display: flex;
   flex-direction: row;
   align-items: center;
-
 }
 #height-weight,#sys-dy,#age-BPM,#pass-cpass{
   display: flex;

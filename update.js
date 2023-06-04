@@ -1,6 +1,5 @@
 var form1 = document.getElementById("form1");
 var form2 = document.getElementById("form2");
-var nextButton = document.getElementById("next-button");
 const id = JSON.parse(localStorage.getItem("id"));
 if (id) {
   fetch("http://localhost:5502/mydata", {
@@ -32,41 +31,54 @@ fetch("http://localhost:5502/mydata", {
   .then((login) => {
     const user = login.find((item) => item.id === id);
     if (user) {
+      console.log(user);
       var name = document.getElementById("name");
       name.value = user.name;
       var email = document.getElementById("email");
       email.value = user.email;
-
       var password = document.getElementById("password");
+      var confirmpassword = document.getElementById("confirm-password");
+     confirmpassword.value= user.password;
       password.value = user.password;
       var profile_picture = document.getElementById("profile-picture");
       profile_picture.value = user.profile_picture;
       var age = document.getElementById("age");
       age.value = user.age;
-      var gender = document.querySelector('input[name="gender"]:checked');
-
+   
+        var gender = document.querySelectorAll('input[name="gender"]');
+        if(user.gender==female)
+        {
+          gender[0].checked='false';
+          gender[1].checked='true';
+        }
+        else{
+          gender[1].checked='false';
+          gender[0].checked='true';
+        }    
       var weight = document.getElementById("weight");
-      weight.value = weight;
+      weight.value = user.weight;
       var height = document.getElementById("height");
       height.value = user.height;
       var bpm = document.getElementById("bpm");
       bpm.value = user.bpm;
       var smoker = document.getElementById("smoker");
+      smoker.checked = user.smoker;
       var cholesterol = document.getElementById("cholesterol");
       cholesterol.value = user.cholesterol;
+      console.log(cholesterol)
       var systolic = document.getElementById("systolic");
       systolic.value = user.systolic;
       var diastolic = document.getElementById("diastolic");
-      diastolic.value = diastolic;
+      diastolic.value = user.diastolic;
     }
   });
 
-nextButton.addEventListener("click", function () {
-  if (validateForm(form1)) {
-    form1.style.display = "none";
-    form2.style.display = "block";
-  }
-});
+// nextButton.addEventListener("click", function () {
+//   if (validateForm(form1)) {
+//     form1.style.display = "none";
+//     form2.style.display = "block";
+//   }
+// });
 
 form2.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -84,7 +96,6 @@ form2.addEventListener("submit", function (event) {
     var cholesterol = document.getElementById("cholesterol").value;
     var systolic = document.getElementById("systolic").value;
     var diastolic = document.getElementById("diastolic").value;
-
     var formData = {
       name: name,
       email: email,
