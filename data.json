@@ -79,6 +79,56 @@
       "systolic": "200",
       "diastolic": "80",
       "id": 6
+    },
+    {
+      "name": "pragnya agarwal",
+      "email": "pragnya@gmail.com",
+      "password": "1234",
+      "profile_picture": "https://th.bing.com/th/id/OIP.y-nGyqT5AwES8oqp344z4gAAAA?pid=ImgDet&rs=1",
+      "age": "19",
+      "gender": "male",
+      "weight": "65",
+      "height": "165",
+      "bpm": "34",
+      "smoker": false,
+      "cholesterol": "220",
+      "systolic": "120",
+      "diastolic": "80",
+      "id": 7
+    },
+    {
+      "name": "dik",
+      "email": "werf",
+      "password": "1",
+      "confirm_password": "1",
+      "profile_picture": "e",
+      "age": "34",
+      "gender": "female",
+      "weight": "34",
+      "height": "234",
+      "bpm": "67",
+      "smoker": false,
+      "cholesterol": "234",
+      "systolic": "120",
+      "diastolic": "80",
+      "id": 8
+    },
+    {
+      "name": "234567",
+      "email": "wertyu",
+      "password": "123",
+      "confirm_password": "123",
+      "profile_picture": "https://th.bing.com/th/id/OIP.y-nGyqT5AwES8oqp344z4gAAAA?pid=ImgDet&rs=1",
+      "age": "23",
+      "gender": "female",
+      "weight": "87",
+      "height": "168",
+      "bpm": "80",
+      "smoker": true,
+      "cholesterol": "200",
+      "systolic": "123",
+      "diastolic": "84",
+      "id": 9
     }
   ]
 }

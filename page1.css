@@ -110,7 +110,8 @@ body{
 .container .form-group input[type="number"],
 .container .form-group input[type="file"] {
   width: 90%;
-  padding: 10px;border-radius: 10px ;
+  padding: 10px;
+  border-radius: 10px ;
   border: #bdbdbd 3px solid;
   /* justify-content: center; */
 }

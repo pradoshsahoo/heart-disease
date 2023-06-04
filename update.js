@@ -121,7 +121,7 @@ form2.addEventListener("submit", function (event) {
     })
       .then(function (response) {
         if (response.ok) {
-          alert("update Successful!");
+          window.location.href= './dashboard.html';
         } else {
           showError("An error occurred. Please try again.");
         }
