@@ -58,8 +58,7 @@ form2.addEventListener("submit", function (event) {
     })
       .then(function (response) {
         if (response.ok) {
-          alert("Signup Successful!");
-          window.location.href = "login.html";
+          window.location.href = "./login.html";
         } else {
           showError("An error occurred. Please try again.");
         }

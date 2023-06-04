@@ -56,8 +56,6 @@ button4.addEventListener("click", () => {
   if (confrm) {
     fetch(`http://localhost:5502/mydata/${id}`, {
       method: "DELETE",
-    }).catch((error) => {
-      alert("An error occured!");
     });
   }
 });
@@ -116,7 +114,7 @@ if (userId) {
       let circularProgress = document.querySelector(".circular-progress"),
         progressValue = document.querySelector(".progress-value");
       let progressStartValue = 0,
-        progressEndValue = result.heartDiseaseRisk,
+        progressEndValue = Math.floor(result.heartDiseaseRisk),
         speed = 30;
 
       let progress = setInterval(() => {
@@ -151,6 +149,7 @@ if (userId) {
 }
 
 function predictHeartDisease(data) {
+  console.log(data);
   const age = data.age;
   const gender = data.gender.toLowerCase();
   const weight = data.weight;
@@ -168,7 +167,7 @@ function predictHeartDisease(data) {
     heartDiseaseRisk += 1;
   } else if (age >= 40 && age <= 50) {
     heartDiseaseRisk += 2;
-  } else {
+  } else if (age > 50) {
     heartDiseaseRisk += 3;
   }
 
@@ -184,7 +183,7 @@ function predictHeartDisease(data) {
     heartDiseaseRisk += 1;
   } else if (bmi >= 30 && bmi <= 35) {
     heartDiseaseRisk += 2;
-  } else {
+  } else if (bmi >= 40) {
     heartDiseaseRisk += 3;
   }
 
@@ -193,19 +192,20 @@ function predictHeartDisease(data) {
     heartDiseaseRisk += 1;
   } else if (bpm >= 85 && bpm <= 100) {
     heartDiseaseRisk += 2;
-  } else {
+  } else if (bpm >= 100) {
     heartDiseaseRisk += 3;
   }
 
   // Smoking
-  if (smoker) {
+  if (smoker == "true") {
     heartDiseaseRisk += 2;
   }
 
   // Cholesterol
   if (cholesterol >= 200 && cholesterol <= 239) {
     heartDiseaseRisk += 1;
-  } else {
+  }
+  if (cholesterol >= 240) {
     heartDiseaseRisk += 2;
   }
 
@@ -217,18 +217,17 @@ function predictHeartDisease(data) {
     (diastolicBP >= 80 && diastolicBP <= 99)
   ) {
     heartDiseaseRisk += 2;
-  } else {
+  } else if (systolicBP > 149 || diastolicBP > 99) {
     heartDiseaseRisk += 3;
   }
 
   // // Calculate probability
   // const probability = 100 * (1 - 0.98767 ** heartDiseaseRisk);
-
   // Predict the risk category
   let riskCategory;
-  if (heartDiseaseRisk <= 5) {
+  if (heartDiseaseRisk <= 4) {
     riskCategory = "Low";
-  } else if (heartDiseaseRisk <= 10) {
+  } else if (heartDiseaseRisk <= 8) {
     riskCategory = "Moderate";
   } else {
     riskCategory = "High";
@@ -237,5 +236,6 @@ function predictHeartDisease(data) {
   if (heartDiseaseRisk > 95) {
     heartDiseaseRisk = 95;
   }
+  console.log(heartDiseaseRisk);
   return { riskCategory, heartDiseaseRisk };
 }
