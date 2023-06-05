@@ -9,4 +9,7 @@ backend-json-server
 ![WhatsApp Image 2023-06-05 at 14 48 19](https://github.com/DIKSHYA2002/heart-disease/assets/78462004/642c70f2-8118-4038-947f-911cb106ba1e)
 # dashboard 
 ![WhatsApp Image 2023-06-05 at 14 49 02](https://github.com/DIKSHYA2002/heart-disease/assets/78462004/9074ba87-0dff-4ab3-87dd-ea346c02f3ee)
-
+# responsive navbar
+![WhatsApp Image 2023-06-05 at 14 51 37](https://github.com/pradoshsahoo/heart-disease/assets/78462004/3a1ebff7-3de2-47c6-9a7e-d9a170e2a989)
+# edit profile
+![Uploading WhatsApp Image 2023-06-05 at 14.55.03 (1).jpeg…]()
