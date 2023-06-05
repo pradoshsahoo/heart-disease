@@ -63,6 +63,23 @@
       "systolic": "120",
       "diastolic": "80",
       "id": 5
+    },
+    {
+      "name": "Plot No -193/891",
+      "email": "pk@gmail.com",
+      "password": "123",
+      "confirm_password": "123",
+      "profile_picture": "https://img.freepik.com/free-icon/user_318-159711.jpg",
+      "age": "60",
+      "gender": "male",
+      "weight": "90",
+      "height": "150",
+      "bpm": "92",
+      "smoker": true,
+      "cholesterol": "210",
+      "systolic": "132",
+      "diastolic": "92",
+      "id": 6
     }
   ]
 }

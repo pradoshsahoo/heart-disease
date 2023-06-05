@@ -120,12 +120,14 @@ if (userId) {
       let progress = setInterval(() => {
         progressStartValue++;
         progressValue.textContent = `${progressStartValue}%`;
-        if (progressStartValue >= 51) {
+        if (progressStartValue >= 52) {
+          cat.style.color = "red";
           circularProgress.style.background = `conic-gradient(rgb(255, 0, 0) ${
             progressStartValue * 3.6
           }deg, #ededed 0deg)`;
           progressValue.style.color = "rgb(255, 0, 0)";
         } else {
+          cat.style.color = "#006bff";
           circularProgress.style.background = `conic-gradient(#006bff ${
             progressStartValue * 3.6
           }deg, #ededed 0deg)`;
@@ -232,7 +234,7 @@ function predictHeartDisease(data) {
   } else {
     riskCategory = "High";
   }
-  heartDiseaseRisk *= 6.667;
+  heartDiseaseRisk *= 5.8;
   if (heartDiseaseRisk > 95) {
     heartDiseaseRisk = 95;
   }

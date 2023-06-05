@@ -325,11 +325,11 @@ body.dark .container{
 }
 .cardValue1{
     text-align: center;
-    padding-top:5%;
+    padding-top:12%;
     /* font-weight: 500;
     color: rgb(0, 200, 255); */
     /* font-weight: bold; */
-    font-size: 60px;
+    font-size: 45px;
     font-weight: 500;
     color: #006bff;
 }
