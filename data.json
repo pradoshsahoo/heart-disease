@@ -1,57 +1,9 @@
 {
   "mydata": [
     {
-      "name": "Anurag Nayak ",
-      "email": "anuragnayak651@gmail.com",
-      "password": "1230",
-      "age": "22",
-      "gender": "male",
-      "weight": "60",
-      "height": "175",
-      "bpm": "72",
-      "smoker": false,
-      "cholesterol": "45",
-      "systolic": "112",
-      "diastolic": "132",
-      "id": 2
-    },
-    {
-      "name": "Rama",
-      "email": "ramchandrarout423@gmail.com",
-      "password": "0123",
-      "age": "22",
-      "gender": "male",
-      "weight": "58",
-      "height": "152",
-      "bpm": "75",
-      "smoker": true,
-      "cholesterol": "68",
-      "systolic": "102",
-      "diastolic": "132",
-      "id": 3
-    },
-    {
-      "name": "Pratiksha mohanty",
-      "email": "liti624@gmail.com",
-      "password": "1234567",
-      "confirm_password": "1234567",
-      "profile_picture": "C:\\fakepath\\wp.jpg",
-      "age": "21",
-      "gender": "female",
-      "weight": "52",
-      "height": "167",
-      "bpm": "82",
-      "smoker": true,
-      "cholesterol": "120",
-      "systolic": "120",
-      "diastolic": "80",
-      "id": 4
-    },
-    {
       "name": "Pradosh",
       "email": "pradoshsahoo81@gmail.com",
       "password": "12",
-      "confirm_password": "12",
       "profile_picture": "https://img.freepik.com/free-icon/user_318-159711.jpg",
       "age": "20",
       "gender": "male",
@@ -65,10 +17,9 @@
       "id": 5
     },
     {
-      "name": "Plot No -193/891",
+      "name": "pradosh",
       "email": "pk@gmail.com",
       "password": "123",
-      "confirm_password": "123",
       "profile_picture": "https://img.freepik.com/free-icon/user_318-159711.jpg",
       "age": "60",
       "gender": "male",
@@ -76,10 +27,27 @@
       "height": "150",
       "bpm": "92",
       "smoker": true,
-      "cholesterol": "210",
-      "systolic": "132",
-      "diastolic": "92",
+      "cholesterol": "150",
+      "systolic": "120",
+      "diastolic": "80",
       "id": 6
+    },
+    {
+      "name": "Pratyush Pattnaik",
+      "email": "pk@gmail.com",
+      "password": "123",
+      "confirm_password": "123",
+      "profile_picture": "https://img.freepik.com/free-icon/user_318-159711.jpg",
+      "age": "22",
+      "gender": "male",
+      "weight": "90",
+      "height": "170",
+      "bpm": "92",
+      "smoker": true,
+      "cholesterol": "240",
+      "systolic": "135",
+      "diastolic": "110",
+      "id": 7
     }
   ]
 }
