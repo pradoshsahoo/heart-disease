@@ -17,12 +17,76 @@ margin-left: 19%;
 width: 50%;
 }
 #heart{
-position: absolute;
-margin: 9% 13%;
-width: 31%;
-height: 63%;
-z-index: 1;
+  position: absolute;
+  margin: 9% 13%;
+  width: 31%;
+  height: 63%;
+  z-index: 1;
+  transform: scale(1);
+  animation: pulse 2.5s linear infinite;
 }
+#circle1{
+  position: absolute;
+  margin: 13.5% 16.5%;
+  width: 24%;
+
+}
+#circle2{
+  position: absolute;
+  margin: 11% 14%;
+  width: 29%;
+}
+.heart::after {
+  /* background:blue; */
+  background: inherit;
+  border-radius: 50%;
+  /* To make circle */
+  content: '';
+  position: absolute;
+  /* top: -100px;*/
+  top: -50%;
+  /* Inherit properties of parent */
+  /* left: -100px; */
+  left: 0;
+  height: 100px;
+  width: 100px;
+  transform: scale(1);
+}
+
+.heart::before {
+
+  background: inherit;
+  border-radius: 50%;
+  /* To make circle */
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -50%;
+  /* Inherit properties of parent */
+  height: 100px;
+  width: 100px;
+  transform: scale(1);
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+
+  50% {
+      transform: scale(0.9);
+      opacity: 1;
+  }
+
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+
+
 #circle1{
 position: absolute;
 margin: 13.5% 16.5%;
@@ -80,6 +144,7 @@ padding: 20px;
 background-color: #ffffff;
 border-radius: 15px;
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+height: 70%;
 }
 #joinus{
 margin-left: 7%;

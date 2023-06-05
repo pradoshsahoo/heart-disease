@@ -50,9 +50,7 @@ if (id) {
 const button4 = document.getElementById("delete");
 
 button4.addEventListener("click", () => {
-  const confrm = confirm("You sure you want to delete the account");
   localStorage.removeItem("id");
-  alert("Deleted successfully");
   if (confrm) {
     fetch(`http://localhost:5502/mydata/${id}`, {
       method: "DELETE",

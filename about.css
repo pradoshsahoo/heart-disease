@@ -1,0 +1,81 @@
+body {
+    font-family: "Poppins";
+    background-color: rgb(239, 239, 239);
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    background-color: white;
+    margin: 2%;
+    max-width: 100%;
+    padding: 8%;
+    box-sizing: border-box;
+    border-radius: 50px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+h1 {
+    color: #006bff;
+    font-size: 250%;
+    margin-bottom: 2%;
+}
+
+p {
+    font-size: 110%;
+    line-height: 1.5;
+}
+
+.start {
+    margin-top: 19px;
+    margin-left: 77rem;
+    position: absolute;
+    align-items: center;
+    background-color: #006bff;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 30px;
+    max-width: 500px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    touch-action: manipulation;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+  }
+  
+  .start:hover,
+  .start:focus {
+    background-color: #0146a7;
+    color: #ffffff;
+  }
+  
+  .start:active {
+    background: #006bff;
+    color: rgb(255, 255, 255, .7);
+  }
+  
+  .start:disabled {
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, .08);
+    color: rgba(0, 0, 0, .3);
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
